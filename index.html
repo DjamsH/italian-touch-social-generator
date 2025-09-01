@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Touch Pizzeria - Générateur Social</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkl0YWxpYW4gVG91Y2ggUGl6emVyaWEgLSBHw6luw6lyYXRldXIgU29jaWFsIiwKICAic2hvcnRfbmFtZSI6ICJJdGFsaWFuIFRvdWNoIiwKICAic3RhcnRfdXJsIjogIi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJ0aGVtZV9jb2xvciI6ICIjMzMzNjc0IiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIgp9">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .mobile-optimized {
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body class="mobile-optimized">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        // Icons as simple SVG components
+        const Instagram = ({ className }) => (
+            <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+        );
+
+        const Video = ({ className }) => (
+            <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23 7l-7 5 7 5V7z"/>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+            </svg>
+        );
+
+        const Camera = ({ className }) => (
+            <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                <circle cx="12" cy="13" r="4"/>
+            </svg>
+        );
+
+        const MapPin = ({ className }) => (
+            <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+            </svg>
+        );
+
+        const MessageCircle = ({ className }) => (
+            <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+        );
+
+        const Clock = ({ className }) => (
+            <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12,6 12,12 16,14"/>
+            </svg>
+        );
+
+        const ItalianTouchSocialGenerator = () => {
+            const [selectedPlatform, setSelectedPlatform] = useState('instagram');
+            const [selectedCategory, setSelectedCategory] = useState('promo');
+            const [generatedPost, setGeneratedPost] = useState(null);
+
+            const postIdeas = {
+                instagram: {
+                    promo: [
+                        {
+                            visual: "Photo de la pizza 4 Saisons avec un gros plan sur les ingrédients frais",
+                            caption: "🍕 La 4 Saisons : jambon, champignons, artichauts, tomates cerises, olives et basilic frais !\n\n✨ -50% sur la 2ème pizza le midi uniquement\n📍 951 Avenue de Dunkerque, Lomme\n☎️ 03 20 04 05 79\n\n#ItalianTouchPizzeria #PizzaLomme #PizzaHalal #PromoMidi",
+                            hashtags: "#pizza #lomme #halal #promo #italien #foodlover"
+                        },
+                        {
+                            visual: "Story avec timer : Pizza Marguerita qui sort du four, fumante",
+                            caption: "🔥 FRAÎCHE DU FOUR !\nPâte pétrie chaque jour + ingrédients 100% naturels = Le combo parfait !\n\nCommandez maintenant 👆\n\n#QualitéItalienne #FaitMaison",
+                            hashtags: "#fresh #qualite #faitmaison #pizzatime"
+                        },
+                        {
+                            visual: "Carrousel avant/après : boule de pâte → pizza finie",
+                            caption: "De nos mains à votre assiette... 👨‍🍳\n\nNotre secret ? Une pâte pétrie chaque matin avec amour !\n\n🕐 Commandez dès 11h\n📞 03 20 04 05 79",
+                            hashtags: "#artisan #faitmaison #patetraditionnelle"
+                        }
+                    ],
+                    lifestyle: [
+                        {
+                            visual: "Boomerang du pizzaïolo qui étale la pâte",
+                            caption: "La magie opère... ✨\nNotre pâte faite maison, pétrie chaque jour avec amour 🤌\n\n'Sentez l'arôme, goûtez l'amour de l'Italie'\n\n#SavoirFaire #Artisan #ItalianTouch",
+                            hashtags: "#artisan #savoirfaire #italien #pizza"
+                        },
+                        {
+                            visual: "Flat lay de tous les ingrédients pour une pizza Truffe",
+                            caption: "Les secrets de notre Pizza Signature TRUFFE 🍄\n\nCrème de truffe + champignons + roquette + mozzarella + filet d'huile d'olive\n\nUn voyage gustatif en Italie ! 🇮🇹",
+                            hashtags: "#signature #truffe #ingredients #premium"
+                        },
+                        {
+                            visual: "Time-lapse de la préparation d'une pizza depuis le pétrissage",
+                            caption: "6h du matin : notre équipe prépare déjà vos futures pizzas ! 🌅\n\nDu pétrissage à la cuisson, tout est fait avec passion.\n\nViande 100% Halal ✅\nIngrédients naturels ✅",
+                            hashtags: "#behindthescenes #passion #halal #qualite"
+                        }
+                    ],
+                    engagement: [
+                        {
+                            visual: "Carrousel de 3 pizzas : Marguerita, 4 Saisons, Pimento",
+                            caption: "Quel est ton trio gagnant ? 🤔\n\n1️⃣ La classique Marguerita\n2️⃣ La généreuse 4 Saisons  \n3️⃣ La pimentée Pimento 🌶️\n\nDis-nous en commentaire ! 👇",
+                            hashtags: "#choix #pizzas #commentaire #engagement"
+                        },
+                        {
+                            visual: "Quiz story : ingrédients mystères d'une pizza",
+                            caption: "Devine cette pizza avec ces indices ! 🕵️‍♀️\n\n🧀 Reblochon\n🥔 Pommes de terre\n🥓 Lardons\n\nPremier qui trouve gagne une pizza ! La réponse en story dans 2h...",
+                            hashtags: "#quiz #jeu #pizza #mystere"
+                        }
+                    ]
+                },
+                tiktok: [
+                    {
+                        concept: "Transformation d'une boule de pâte en pizza",
+                        script: "Début : Boule de pâte\n→ Étalage rapide en musique\n→ Ajout sauce tomate artistique\n→ Mozzarella qui tombe en pluie\n→ Garniture qui vole et se pose\n→ Zoom sur la pizza finie\n\nTexte : 'POV: Tu commandes chez Italian Touch'",
+                        son: "Son tendance transformation ou musique italienne énergique"
+                    },
+                    {
+                        concept: "Défi 'Devine la pizza'",
+                        script: "Montrer juste les ingrédients sans révéler\n→ Suspense avec zoom sur chaque ingrédient\n→ Les utilisateurs devinent en commentaires\n→ Révélation surprise de la pizza à la fin\n\nExemple : Reblochon + pommes de terre + lardons = Tartiflette",
+                        son: "Son de suspense ou musique de jeu TV"
+                    },
+                    {
+                        concept: "Behind the scenes matinal",
+                        script: "6h du matin : préparation de la pâte\n→ Pétrissage en accéléré\n→ Préparation des ingrédients\n→ 'Prêt pour vous régaler !'\n\nTexte : 'Journée type chez Italian Touch'\nTags : #MorningVibes #BehindTheScenes",
+                        son: "Musique motivante du matin type 'Good Morning'"
+                    },
+                    {
+                        concept: "Challenge 'Rate my pizza'",
+                        script: "Montrer différentes pizzas une par une\n→ Demander aux viewers de noter /10\n→ Statistiques en temps réel\n→ 'Votre préférée c'est...'\n\nFinaliser avec la pizza la mieux notée",
+                        son: "Son viral 'Rate my...' ou musique de compétition"
+                    }
+                ],
+                snapchat: [
+                    {
+                        type: "Story spontanée",
+                        content: "Pizza qui sort du four avec le filtre température\nTexte : 'Qui a dit que le bonheur ne se commande pas ? 🔥'\nSticker localisation + heure + température",
+                        timing: "Pendant le service, quand les pizzas sortent du four"
+                    },
+                    {
+                        type: "Snap rapide",
+                        content: "Selfie de l'équipe avec des pizzas\nTexte : 'L'équipe qui va vous régaler ce soir ! 😄'\nEmoji pizza + coeur + filtre groupe",
+                        timing: "Début de service du soir (18h-19h)"
+                    },
+                    {
+                        type: "Story promo flash",
+                        content: "Zoom sur une pizza avec texte animé\n'RAPPEL : -50% sur la 2ème pizza jusqu'à 14h !'\nCompte à rebours + sticker promo",
+                        timing: "Pendant la promo midi (12h-13h30)"
+                    },
+                    {
+                        type: "Snap client heureux",
+                        content: "Client qui mord dans sa pizza avec réaction\nTexte : 'La réaction dit tout ! 😍'\nMusique + emoji satisfaction",
+                        timing: "Quand un client mange sur place"
+                    }
+                ]
+            };
+
+            const generatePost = () => {
+                let content;
+                if (selectedPlatform === 'instagram') {
+                    const posts = postIdeas.instagram[selectedCategory];
+                    content = posts[Math.floor(Math.random() * posts.length)];
+                } else {
+                    const posts = postIdeas[selectedPlatform];
+                    content = posts[Math.floor(Math.random() * posts.length)];
+                }
+                setGeneratedPost(content);
+            };
+
+            const platformColors = {
+                instagram: 'from-purple-600 to-pink-600',
+                tiktok: 'from-black to-red-600',
+                snapchat: 'from-yellow-400 to-yellow-600'
+            };
+
+            return (
+                <div className="max-w-4xl mx-auto p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+                    <div className="text-center mb-6 sm:mb-8">
+                        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Italian Touch Pizzeria</h1>
+                        <p className="text-base sm:text-lg text-gray-600">Générateur de contenu réseaux sociaux</p>
+                        <div className="flex items-center justify-center gap-2 mt-2 text-xs sm:text-sm text-gray-500">
+                            <MapPin className="h-3 w-3 sm:h-4 sm:w-4" />
+                            <span>951 Avenue de Dunkerque, Lomme</span>
+                        </div>
+                    </div>
+
+                    <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 mb-4 sm:mb-6">
+                        <h2 className="text-lg sm:text-xl font-semibold mb-4 text-gray-800">Choisis ta plateforme</h2>
+                        <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6">
+                            {[
+                                { id: 'instagram', name: 'Instagram', icon: Instagram, color: 'purple' },
+                                { id: 'tiktok', name: 'TikTok', icon: Video, color: 'red' },
+                                { id: 'snapchat', name: 'Snapchat', icon: Camera, color: 'yellow' }
+                            ].map((platform) => (
+                                <button
+                                    key={platform.id}
+                                    onClick={() => setSelectedPlatform(platform.id)}
+                                    className={`p-3 sm:p-4 rounded-lg border-2 transition-all ${
+                                        selectedPlatform === platform.id
+                                            ? 'border-blue-500 bg-blue-50'
+                                            : 'border-gray-200 hover:border-gray-300'
+                                    }`}
+                                >
+                                    <platform.icon className={`h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-1 sm:mb-2 ${
+                                        selectedPlatform === platform.id ? 'text-blue-600' : 'text-gray-600'
+                                    }`} />
+                                    <span className="text-xs sm:text-sm font-medium">{platform.name}</span>
+                                </button>
+                            ))}
+                        </div>
+
+                        {selectedPlatform === 'instagram' && (
+                            <div className="mb-4 sm:mb-6">
+                                <h3 className="text-base sm:text-lg font-semibold mb-3 text-gray-800">Type de contenu</h3>
+                                <div className="grid grid-cols-3 gap-2 sm:gap-3">
+                                    {[
+                                        { id: 'promo', name: 'Promotions', icon: '🎯' },
+                                        { id: 'lifestyle', name: 'Lifestyle', icon: '✨' },
+                                        { id: 'engagement', name: 'Engagement', icon: '💬' }
+                                    ].map((category) => (
+                                        <button
+                                            key={category.id}
+                                            onClick={() => setSelectedCategory(category.id)}
+                                            className={`p-2 sm:p-3 rounded-lg border transition-all ${
+                                                selectedCategory === category.id
+                                                    ? 'border-purple-500 bg-purple-50'
+                                                    : 'border-gray-200 hover:border-gray-300'
+                                            }`}
+                                        >
+                                            <span className="text-xl sm:text-2xl mb-1 block">{category.icon}</span>
+                                            <span className="text-xs sm:text-sm font-medium">{category.name}</span>
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        <button
+                            onClick={generatePost}
+                            className={`w-full py-3 px-4 sm:px-6 rounded-lg text-white font-semibold bg-gradient-to-r ${platformColors[selectedPlatform]} hover:opacity-90 transition-opacity text-sm sm:text-base`}
+                        >
+                            Générer une idée de publication 🚀
+                        </button>
+                    </div>
+
+                    {generatedPost && (
+                        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                            <div className="flex items-center gap-2 mb-4">
+                                <div className={`h-3 w-3 rounded-full bg-gradient-to-r ${platformColors[selectedPlatform]}`}></div>
+                                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 capitalize">
+                                    Idée pour {selectedPlatform}
+                                </h3>
+                            </div>
+
+                            {selectedPlatform === 'instagram' ? (
+                                <div className="space-y-4">
+                                    <div className="bg-gray-50 p-4 rounded-lg">
+                                        <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                                            <Camera className="h-4 w-4" />
+                                            Visuel suggéré
+                                        </h4>
+                                        <p className="text-gray-700 text-sm sm:text-base">{generatedPost.visual}</p>
+                                    </div>
+                                    
+                                    <div className="bg-blue-50 p-4 rounded-lg">
+                                        <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                                            <MessageCircle className="h-4 w-4" />
+                                            Caption
+                                        </h4>
+                                        <p className="text-gray-700 whitespace-pre-line text-sm sm:text-base">{generatedPost.caption}</p>
+                                    </div>
+
+                                    <div className="bg-purple-50 p-4 rounded-lg">
+                                        <h4 className="font-semibold text-gray-800 mb-2"># Hashtags</h4>
+                                        <p className="text-purple-700 text-sm sm:text-base">{generatedPost.hashtags}</p>
+                                    </div>
+                                </div>
+                            ) : selectedPlatform === 'tiktok' ? (
+                                <div className="space-y-4">
+                                    <div className="bg-gray-50 p-4 rounded-lg">
+                                        <h4 className="font-semibold text-gray-800 mb-2">💡 Concept</h4>
+                                        <p className="text-gray-700 text-sm sm:text-base">{generatedPost.concept}</p>
+                                    </div>
+                                    
+                                    <div className="bg-red-50 p-4 rounded-lg">
+                                        <h4 className="font-semibold text-gray-800 mb-2">🎬 Script</h4>
+                                        <p className="text-gray-700 whitespace-pre-line text-sm sm:text-base">{generatedPost.script}</p>
+                                    </div>
+
+                                    <div className="bg-yellow-50 p-4 rounded-lg">
+                                        <h4 className="font-semibold text-gray-800 mb-2">🎵 Son</h4>
+                                        <p className="text-gray-700 text-sm sm:text-base">{generatedPost.son}</p>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className="space-y-4">
+                                    <div className="bg-yellow-50 p-4 rounded-lg">
+                                        <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                                            <Clock className="h-4 w-4" />
+                                            {generatedPost.type}
+                                        </h4>
+                                        <p className="text-gray-700 text-sm sm:text-base">{generatedPost.content}</p>
+                                    </div>
+                                    
+                                    <div className="bg-orange-50 p-4 rounded-lg">
+                                        <h4 className="font-semibold text-gray-800 mb-2">⏰ Timing optimal</h4>
+                                        <p className="text-gray-700 text-sm sm:text-base">{generatedPost.timing}</p>
+                                    </div>
+                                </div>
+                            )}
+
+                            <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-green-50 rounded-lg">
+                                <h4 className="font-semibold text-green-800 mb-2 text-sm sm:text-base">💡 Conseil bonus</h4>
+                                <p className="text-green-700 text-xs sm:text-sm">
+                                    {selectedPlatform === 'instagram' && "Publie en stories d'abord pour tester l'engagement, puis en post si ça marche bien !"}
+                                    {selectedPlatform === 'tiktok' && "Filme plusieurs versions et garde celle avec le meilleur dynamisme. L'authenticité marche mieux que la perfection !"}
+                                    {selectedPlatform === 'snapchat' && "Sois spontané et authentique ! Snapchat récompense le contenu naturel et en temps réel."}
+                                </p>
+                            </div>
+                        </div>
+                    )}
+
+                    <div className="mt-6 sm:mt-8 bg-gradient-to-r from-blue-800 to-blue-900 rounded-xl p-4 sm:p-6 text-white">
+                        <h3 className="text-base sm:text-lg font-semibold mb-3">🕒 Planning de publication optimal</h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs sm:text-sm">
+                            <div className="bg-white bg-opacity-20 p-2 sm:p-3 rounded-lg">
+                                <strong>Instagram</strong><br />
+                                📍 12h-14h (midi)<br />
+                                📍 19h-21h (soir)
+                            </div>
+                            <div className="bg-white bg-opacity-20 p-2 sm:p-3 rounded-lg">
+                                <strong>TikTok</strong><br />
+                                📍 12h-15h<br />
+                                📍 19h-22h
+                            </div>
+                            <div className="bg-white bg-opacity-20 p-2 sm:p-3 rounded-lg">
+                                <strong>Snapchat</strong><br />
+                                📍 En temps réel<br />
+                                📍 Moments forts
+                            </div>
+                        </div>
+                        
+                        <div className="mt-4 p-3 bg-white bg-opacity-20 rounded-lg">
+                            <h4 className="font-semibold mb-2">📱 Partage cet outil :</h4>
+                            <p className="text-xs sm:text-sm opacity-90">
+                                Envoie le lien de cette page à ton équipe sur WhatsApp ! 
+                                Ils pourront générer leurs propres idées de posts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<ItalianTouchSocialGenerator />, document.getElementById('root'));
+    </script>
+</body>
+</html>
