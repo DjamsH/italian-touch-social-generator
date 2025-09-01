@@ -1,427 +1,444 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Italian Touch Pizzeria - Générateur Social</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .mobile-optimized {
-            touch-action: manipulation;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .platform-btn {
-            transition: all 0.3s ease;
-        }
-        .platform-btn:hover {
-            transform: translateY(-2px);
-        }
-        .platform-btn.active {
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-        }
-        .generate-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .generate-btn:hover {
-            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
-        }
-        .instagram-gradient {
-            background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
-        }
-        .tiktok-gradient {
-            background: linear-gradient(135deg, #000000 0%, #dc2626 100%);
-        }
-        .snapchat-gradient {
-            background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
-        }
-    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; -webkit-text-stroke: #000000; min-height: 15.0px}
+    span.s1 {font-kerning: none}
+  </style>
 </head>
-<body class="mobile-optimized">
-    <div class="max-w-4xl mx-auto p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
-        <!-- Header -->
-        <div class="text-center mb-6 sm:mb-8">
-            <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Italian Touch Pizzeria</h1>
-            <p class="text-base sm:text-lg text-gray-600">Générateur de contenu réseaux sociaux</p>
-            <div class="flex items-center justify-center gap-2 mt-2 text-xs sm:text-sm text-gray-500">
-                <svg class="h-3 w-3 sm:h-4 sm:w-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                </svg>
-                <span>951 Avenue de Dunkerque, Lomme</span>
-            </div>
-        </div>
-
-        <!-- Main Card -->
-        <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 mb-4 sm:mb-6">
-            <h2 class="text-lg sm:text-xl font-semibold mb-4 text-gray-800">Choisis ta plateforme</h2>
-            
-            <!-- Platform Selection -->
-            <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6">
-                <button id="instagram-btn" class="platform-btn p-3 sm:p-4 rounded-lg border-2 border-gray-200 hover:border-purple-300" onclick="selectPlatform('instagram')">
-                    <svg class="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-1 sm:mb-2 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                    <span class="text-xs sm:text-sm font-medium">Instagram</span>
-                </button>
-
-                <button id="tiktok-btn" class="platform-btn p-3 sm:p-4 rounded-lg border-2 border-gray-200 hover:border-red-300" onclick="selectPlatform('tiktok')">
-                    <svg class="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-1 sm:mb-2 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23 7l-7 5 7 5V7z"/>
-                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
-                    </svg>
-                    <span class="text-xs sm:text-sm font-medium">TikTok</span>
-                </button>
-
-                <button id="snapchat-btn" class="platform-btn p-3 sm:p-4 rounded-lg border-2 border-gray-200 hover:border-yellow-300" onclick="selectPlatform('snapchat')">
-                    <svg class="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-1 sm:mb-2 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-                        <circle cx="12" cy="13" r="4"/>
-                    </svg>
-                    <span class="text-xs sm:text-sm font-medium">Snapchat</span>
-                </button>
-            </div>
-
-            <!-- Instagram Categories -->
-            <div id="instagram-categories" class="mb-4 sm:mb-6 hidden">
-                <h3 class="text-base sm:text-lg font-semibold mb-3 text-gray-800">Type de contenu</h3>
-                <div class="grid grid-cols-3 gap-2 sm:gap-3">
-                    <button id="promo-btn" class="p-2 sm:p-3 rounded-lg border border-gray-200 hover:border-purple-300" onclick="selectCategory('promo')">
-                        <span class="text-xl sm:text-2xl mb-1 block">🎯</span>
-                        <span class="text-xs sm:text-sm font-medium">Promotions</span>
-                    </button>
-                    <button id="lifestyle-btn" class="p-2 sm:p-3 rounded-lg border border-gray-200 hover:border-purple-300" onclick="selectCategory('lifestyle')">
-                        <span class="text-xl sm:text-2xl mb-1 block">✨</span>
-                        <span class="text-xs sm:text-sm font-medium">Lifestyle</span>
-                    </button>
-                    <button id="engagement-btn" class="p-2 sm:p-3 rounded-lg border border-gray-200 hover:border-purple-300" onclick="selectCategory('engagement')">
-                        <span class="text-xl sm:text-2xl mb-1 block">💬</span>
-                        <span class="text-xs sm:text-sm font-medium">Engagement</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Generate Button -->
-            <button id="generate-btn" class="generate-btn w-full py-3 px-4 sm:px-6 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity text-sm sm:text-base" onclick="generatePost()">
-                Générer une idée de publication 🚀
-            </button>
-        </div>
-
-        <!-- Generated Post Display -->
-        <div id="generated-post" class="bg-white rounded-xl shadow-lg p-4 sm:p-6 hidden">
-            <div class="flex items-center gap-2 mb-4">
-                <div id="platform-indicator" class="h-3 w-3 rounded-full bg-purple-500"></div>
-                <h3 id="post-title" class="text-lg sm:text-xl font-semibold text-gray-800">
-                    Idée pour Instagram
-                </h3>
-            </div>
-            
-            <div id="post-content"></div>
-
-            <div class="mt-4 sm:mt-6 p-3 sm:p-4 bg-green-50 rounded-lg">
-                <h4 class="font-semibold text-green-800 mb-2 text-sm sm:text-base">💡 Conseil bonus</h4>
-                <p id="bonus-tip" class="text-green-700 text-xs sm:text-sm">
-                    Publie en stories d'abord pour tester l'engagement, puis en post si ça marche bien !
-                </p>
-            </div>
-        </div>
-
-        <!-- Planning Section -->
-        <div class="mt-6 sm:mt-8 bg-gradient-to-r from-blue-800 to-blue-900 rounded-xl p-4 sm:p-6 text-white">
-            <h3 class="text-base sm:text-lg font-semibold mb-3">🕒 Planning de publication optimal</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs sm:text-sm">
-                <div class="bg-white bg-opacity-20 p-2 sm:p-3 rounded-lg">
-                    <strong>Instagram</strong><br />
-                    📍 12h-14h (midi)<br />
-                    📍 19h-21h (soir)
-                </div>
-                <div class="bg-white bg-opacity-20 p-2 sm:p-3 rounded-lg">
-                    <strong>TikTok</strong><br />
-                    📍 12h-15h<br />
-                    📍 19h-22h
-                </div>
-                <div class="bg-white bg-opacity-20 p-2 sm:p-3 rounded-lg">
-                    <strong>Snapchat</strong><br />
-                    📍 En temps réel<br />
-                    📍 Moments forts
-                </div>
-            </div>
-            
-            <div class="mt-4 p-3 bg-white bg-opacity-20 rounded-lg">
-                <h4 class="font-semibold mb-2">📱 Partage cet outil :</h4>
-                <p class="text-xs sm:text-sm opacity-90">
-                    Envoie le lien de cette page à ton équipe sur WhatsApp ! 
-                    Ils pourront générer leurs propres idées de posts.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // State variables
-        let selectedPlatform = 'instagram';
-        let selectedCategory = 'promo';
-
-        // Post ideas data
-        const postIdeas = {
-            instagram: {
-                promo: [
-                    {
-                        visual: "Photo de la pizza 4 Saisons avec un gros plan sur les ingrédients frais",
-                        caption: "🍕 La 4 Saisons : jambon, champignons, artichauts, tomates cerises, olives et basilic frais !\n\n✨ -50% sur la 2ème pizza le midi uniquement\n📍 951 Avenue de Dunkerque, Lomme\n☎️ 03 20 04 05 79\n\n#ItalianTouchPizzeria #PizzaLomme #PizzaHalal #PromoMidi",
-                        hashtags: "#pizza #lomme #halal #promo #italien #foodlover"
-                    },
-                    {
-                        visual: "Story avec timer : Pizza Marguerita qui sort du four, fumante",
-                        caption: "🔥 FRAÎCHE DU FOUR !\nPâte pétrie chaque jour + ingrédients 100% naturels = Le combo parfait !\n\nCommandez maintenant 👆\n\n#QualitéItalienne #FaitMaison",
-                        hashtags: "#fresh #qualite #faitmaison #pizzatime"
-                    },
-                    {
-                        visual: "Carrousel avant/après : boule de pâte → pizza finie",
-                        caption: "De nos mains à votre assiette... 👨‍🍳\n\nNotre secret ? Une pâte pétrie chaque matin avec amour !\n\n🕐 Commandez dès 11h\n📞 03 20 04 05 79",
-                        hashtags: "#artisan #faitmaison #patetraditionnelle"
-                    }
-                ],
-                lifestyle: [
-                    {
-                        visual: "Boomerang du pizzaïolo qui étale la pâte",
-                        caption: "La magie opère... ✨\nNotre pâte faite maison, pétrie chaque jour avec amour 🤌\n\n'Sentez l'arôme, goûtez l'amour de l'Italie'\n\n#SavoirFaire #Artisan #ItalianTouch",
-                        hashtags: "#artisan #savoirfaire #italien #pizza"
-                    },
-                    {
-                        visual: "Flat lay de tous les ingrédients pour une pizza Truffe",
-                        caption: "Les secrets de notre Pizza Signature TRUFFE 🍄\n\nCrème de truffe + champignons + roquette + mozzarella + filet d'huile d'olive\n\nUn voyage gustatif en Italie ! 🇮🇹",
-                        hashtags: "#signature #truffe #ingredients #premium"
-                    },
-                    {
-                        visual: "Time-lapse de la préparation d'une pizza depuis le pétrissage",
-                        caption: "6h du matin : notre équipe prépare déjà vos futures pizzas ! 🌅\n\nDu pétrissage à la cuisson, tout est fait avec passion.\n\nViande 100% Halal ✅\nIngrédients naturels ✅",
-                        hashtags: "#behindthescenes #passion #halal #qualite"
-                    }
-                ],
-                engagement: [
-                    {
-                        visual: "Carrousel de 3 pizzas : Marguerita, 4 Saisons, Pimento",
-                        caption: "Quel est ton trio gagnant ? 🤔\n\n1️⃣ La classique Marguerita\n2️⃣ La généreuse 4 Saisons  \n3️⃣ La pimentée Pimento 🌶️\n\nDis-nous en commentaire ! 👇",
-                        hashtags: "#choix #pizzas #commentaire #engagement"
-                    },
-                    {
-                        visual: "Quiz story : ingrédients mystères d'une pizza",
-                        caption: "Devine cette pizza avec ces indices ! 🕵️‍♀️\n\n🧀 Reblochon\n🥔 Pommes de terre\n🥓 Lardons\n\nPremier qui trouve gagne une pizza ! La réponse en story dans 2h...",
-                        hashtags: "#quiz #jeu #pizza #mystere"
-                    }
-                ]
-            },
-            tiktok: [
-                {
-                    concept: "Transformation d'une boule de pâte en pizza",
-                    script: "Début : Boule de pâte\n→ Étalage rapide en musique\n→ Ajout sauce tomate artistique\n→ Mozzarella qui tombe en pluie\n→ Garniture qui vole et se pose\n→ Zoom sur la pizza finie\n\nTexte : 'POV: Tu commandes chez Italian Touch'",
-                    son: "Son tendance transformation ou musique italienne énergique"
-                },
-                {
-                    concept: "Défi 'Devine la pizza'",
-                    script: "Montrer juste les ingrédients sans révéler\n→ Suspense avec zoom sur chaque ingrédient\n→ Les utilisateurs devinent en commentaires\n→ Révélation surprise de la pizza à la fin\n\nExemple : Reblochon + pommes de terre + lardons = Tartiflette",
-                    son: "Son de suspense ou musique de jeu TV"
-                },
-                {
-                    concept: "Behind the scenes matinal",
-                    script: "6h du matin : préparation de la pâte\n→ Pétrissage en accéléré\n→ Préparation des ingrédients\n→ 'Prêt pour vous régaler !'\n\nTexte : 'Journée type chez Italian Touch'\nTags : #MorningVibes #BehindTheScenes",
-                    son: "Musique motivante du matin type 'Good Morning'"
-                },
-                {
-                    concept: "Challenge 'Rate my pizza'",
-                    script: "Montrer différentes pizzas une par une\n→ Demander aux viewers de noter /10\n→ Statistiques en temps réel\n→ 'Votre préférée c'est...'\n\nFinaliser avec la pizza la mieux notée",
-                    son: "Son viral 'Rate my...' ou musique de compétition"
-                }
-            ],
-            snapchat: [
-                {
-                    type: "Story spontanée",
-                    content: "Pizza qui sort du four avec le filtre température\nTexte : 'Qui a dit que le bonheur ne se commande pas ? 🔥'\nSticker localisation + heure + température",
-                    timing: "Pendant le service, quand les pizzas sortent du four"
-                },
-                {
-                    type: "Snap rapide",
-                    content: "Selfie de l'équipe avec des pizzas\nTexte : 'L'équipe qui va vous régaler ce soir ! 😄'\nEmoji pizza + coeur + filtre groupe",
-                    timing: "Début de service du soir (18h-19h)"
-                },
-                {
-                    type: "Story promo flash",
-                    content: "Zoom sur une pizza avec texte animé\n'RAPPEL : -50% sur la 2ème pizza jusqu'à 14h !'\nCompte à rebours + sticker promo",
-                    timing: "Pendant la promo midi (12h-13h30)"
-                },
-                {
-                    type: "Snap client heureux",
-                    content: "Client qui mord dans sa pizza avec réaction\nTexte : 'La réaction dit tout ! 😍'\nMusique + emoji satisfaction",
-                    timing: "Quand un client mange sur place"
-                }
-            ]
-        };
-
-        function selectPlatform(platform) {
-            selectedPlatform = platform;
-            
-            // Reset all platform buttons
-            document.querySelectorAll('.platform-btn').forEach(btn => {
-                btn.classList.remove('active', 'border-blue-500', 'bg-blue-50');
-                btn.classList.add('border-gray-200');
-                btn.querySelector('svg').classList.remove('text-blue-600');
-                btn.querySelector('svg').classList.add('text-gray-600');
-            });
-            
-            // Activate selected platform
-            const selectedBtn = document.getElementById(platform + '-btn');
-            selectedBtn.classList.add('active', 'border-blue-500', 'bg-blue-50');
-            selectedBtn.classList.remove('border-gray-200');
-            selectedBtn.querySelector('svg').classList.add('text-blue-600');
-            selectedBtn.querySelector('svg').classList.remove('text-gray-600');
-            
-            // Show/hide Instagram categories
-            const categoriesDiv = document.getElementById('instagram-categories');
-            if (platform === 'instagram') {
-                categoriesDiv.classList.remove('hidden');
-            } else {
-                categoriesDiv.classList.add('hidden');
-            }
-            
-            // Update generate button style
-            const generateBtn = document.getElementById('generate-btn');
-            generateBtn.classList.remove('instagram-gradient', 'tiktok-gradient', 'snapchat-gradient');
-            generateBtn.classList.add(platform + '-gradient');
-        }
-
-        function selectCategory(category) {
-            selectedCategory = category;
-            
-            // Reset all category buttons
-            document.querySelectorAll('#instagram-categories button').forEach(btn => {
-                btn.classList.remove('border-purple-500', 'bg-purple-50');
-                btn.classList.add('border-gray-200');
-            });
-            
-            // Activate selected category
-            const selectedBtn = document.getElementById(category + '-btn');
-            selectedBtn.classList.add('border-purple-500', 'bg-purple-50');
-            selectedBtn.classList.remove('border-gray-200');
-        }
-
-        function generatePost() {
-            let content;
-            
-            if (selectedPlatform === 'instagram') {
-                const posts = postIdeas.instagram[selectedCategory];
-                content = posts[Math.floor(Math.random() * posts.length)];
-            } else {
-                const posts = postIdeas[selectedPlatform];
-                content = posts[Math.floor(Math.random() * posts.length)];
-            }
-            
-            displayPost(content);
-        }
-
-        function displayPost(content) {
-            const postDiv = document.getElementById('generated-post');
-            const titleElement = document.getElementById('post-title');
-            const contentElement = document.getElementById('post-content');
-            const bonusTipElement = document.getElementById('bonus-tip');
-            const indicatorElement = document.getElementById('platform-indicator');
-            
-            // Update title and indicator
-            titleElement.textContent = `Idée pour ${selectedPlatform}`;
-            indicatorElement.className = `h-3 w-3 rounded-full ${selectedPlatform === 'instagram' ? 'bg-gradient-to-r from-purple-600 to-pink-600' : selectedPlatform === 'tiktok' ? 'bg-gradient-to-r from-black to-red-600' : 'bg-gradient-to-r from-yellow-400 to-yellow-600'}`;
-            
-            // Generate content based on platform
-            let contentHTML = '';
-            
-            if (selectedPlatform === 'instagram') {
-                contentHTML = `
-                    <div class="space-y-4">
-                        <div class="bg-gray-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
-                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-                                    <circle cx="12" cy="13" r="4"/>
-                                </svg>
-                                Visuel suggéré
-                            </h4>
-                            <p class="text-gray-700 text-sm sm:text-base">${content.visual}</p>
-                        </div>
-                        
-                        <div class="bg-blue-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
-                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-                                </svg>
-                                Caption
-                            </h4>
-                            <p class="text-gray-700 whitespace-pre-line text-sm sm:text-base">${content.caption}</p>
-                        </div>
-
-                        <div class="bg-purple-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-800 mb-2"># Hashtags</h4>
-                            <p class="text-purple-700 text-sm sm:text-base">${content.hashtags}</p>
-                        </div>
-                    </div>
-                `;
-                bonusTipElement.textContent = "Publie en stories d'abord pour tester l'engagement, puis en post si ça marche bien !";
-                
-            } else if (selectedPlatform === 'tiktok') {
-                contentHTML = `
-                    <div class="space-y-4">
-                        <div class="bg-gray-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-800 mb-2">💡 Concept</h4>
-                            <p class="text-gray-700 text-sm sm:text-base">${content.concept}</p>
-                        </div>
-                        
-                        <div class="bg-red-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-800 mb-2">🎬 Script</h4>
-                            <p class="text-gray-700 whitespace-pre-line text-sm sm:text-base">${content.script}</p>
-                        </div>
-
-                        <div class="bg-yellow-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-800 mb-2">🎵 Son</h4>
-                            <p class="text-gray-700 text-sm sm:text-base">${content.son}</p>
-                        </div>
-                    </div>
-                `;
-                bonusTipElement.textContent = "Filme plusieurs versions et garde celle avec le meilleur dynamisme. L'authenticité marche mieux que la perfection !";
-                
-            } else { // Snapchat
-                contentHTML = `
-                    <div class="space-y-4">
-                        <div class="bg-yellow-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-800 mb-2 flex items-center gap-2">
-                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polyline points="12,6 12,12 16,14"/>
-                                </svg>
-                                ${content.type}
-                            </h4>
-                            <p class="text-gray-700 text-sm sm:text-base">${content.content}</p>
-                        </div>
-                        
-                        <div class="bg-orange-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-800 mb-2">⏰ Timing optimal</h4>
-                            <p class="text-gray-700 text-sm sm:text-base">${content.timing}</p>
-                        </div>
-                    </div>
-                `;
-                bonusTipElement.textContent = "Sois spontané et authentique ! Snapchat récompense le contenu naturel et en temps réel.";
-            }
-            
-            contentElement.innerHTML = contentHTML;
-            postDiv.classList.remove('hidden');
-            
-            // Smooth scroll to the generated post
-            postDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        // Initialize the app
-        document.addEventListener('DOMContentLoaded', function() {
-            selectPlatform('instagram');
-            selectCategory('promo');
-        });
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="fr"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Italian Touch Pizzeria - Générateur Social&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.mobile-optimized {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>touch-action: manipulation;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>-webkit-tap-highlight-color: transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.platform-btn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.platform-btn:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.platform-btn.active {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.generate-btn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.generate-btn:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.instagram-gradient {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.tiktok-gradient {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #000000 0%, #dc2626 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.snapchat-gradient {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #facc15 0%, #eab308 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body class="mobile-optimized"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-4xl mx-auto p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Header --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="text-center mb-6 sm:mb-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2"&gt;Italian Touch Pizzeria&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="text-base sm:text-lg text-gray-600"&gt;Générateur de contenu réseaux sociaux&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center justify-center gap-2 mt-2 text-xs sm:text-sm text-gray-500"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;svg class="h-3 w-3 sm:h-4 sm:w-4" fill="currentColor" viewBox="0 0 24 24"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;circle cx="12" cy="10" r="3"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span&gt;951 Avenue de Dunkerque, Lomme&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Main Card --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 mb-4 sm:mb-6"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-lg sm:text-xl font-semibold mb-4 text-gray-800"&gt;Choisis ta plateforme&lt;/h2&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Platform Selection --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button id="instagram-btn" class="platform-btn p-3 sm:p-4 rounded-lg border-2 border-gray-200 hover:border-purple-300" onclick="selectPlatform('instagram')"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;svg class="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-1 sm:mb-2 text-gray-600" fill="currentColor" viewBox="0 0 24 24"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs sm:text-sm font-medium"&gt;Instagram&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button id="tiktok-btn" class="platform-btn p-3 sm:p-4 rounded-lg border-2 border-gray-200 hover:border-red-300" onclick="selectPlatform('tiktok')"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;svg class="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-1 sm:mb-2 text-gray-600" fill="currentColor" viewBox="0 0 24 24"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;path d="M23 7l-7 5 7 5V7z"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;rect x="1" y="5" width="15" height="14" rx="2" ry="2"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs sm:text-sm font-medium"&gt;TikTok&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button id="snapchat-btn" class="platform-btn p-3 sm:p-4 rounded-lg border-2 border-gray-200 hover:border-yellow-300" onclick="selectPlatform('snapchat')"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;svg class="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-1 sm:mb-2 text-gray-600" fill="currentColor" viewBox="0 0 24 24"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;circle cx="12" cy="13" r="4"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs sm:text-sm font-medium"&gt;Snapchat&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Instagram Categories --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="instagram-categories" class="mb-4 sm:mb-6 hidden"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-base sm:text-lg font-semibold mb-3 text-gray-800"&gt;Type de contenu&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="grid grid-cols-3 gap-2 sm:gap-3"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button id="promo-btn" class="p-2 sm:p-3 rounded-lg border border-gray-200 hover:border-purple-300" onclick="selectCategory('promo')"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xl sm:text-2xl mb-1 block"&gt;🎯&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs sm:text-sm font-medium"&gt;Promotions&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button id="lifestyle-btn" class="p-2 sm:p-3 rounded-lg border border-gray-200 hover:border-purple-300" onclick="selectCategory('lifestyle')"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xl sm:text-2xl mb-1 block"&gt;✨&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs sm:text-sm font-medium"&gt;Lifestyle&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button id="engagement-btn" class="p-2 sm:p-3 rounded-lg border border-gray-200 hover:border-purple-300" onclick="selectCategory('engagement')"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xl sm:text-2xl mb-1 block"&gt;💬&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs sm:text-sm font-medium"&gt;Engagement&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Generate Button --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button id="generate-btn" class="generate-btn w-full py-3 px-4 sm:px-6 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity text-sm sm:text-base" onclick="generatePost()"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Générer une idée de publication 🚀</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Generated Post Display --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="generated-post" class="bg-white rounded-xl shadow-lg p-4 sm:p-6 hidden"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center gap-2 mb-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div id="platform-indicator" class="h-3 w-3 rounded-full bg-purple-500"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3 id="post-title" class="text-lg sm:text-xl font-semibold text-gray-800"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>Idée pour Instagram</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="post-content"&gt;&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="mt-4 sm:mt-6 p-3 sm:p-4 bg-green-50 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h4 class="font-semibold text-green-800 mb-2 text-sm sm:text-base"&gt;💡 Conseil bonus&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p id="bonus-tip" class="text-green-700 text-xs sm:text-sm"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>Publie en stories d'abord pour tester l'engagement, puis en post si ça marche bien !</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Planning Section --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="mt-6 sm:mt-8 bg-gradient-to-r from-blue-800 to-blue-900 rounded-xl p-4 sm:p-6 text-white"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-base sm:text-lg font-semibold mb-3"&gt;🕒 Planning de publication optimal&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs sm:text-sm"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white bg-opacity-20 p-2 sm:p-3 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;strong&gt;Instagram&lt;/strong&gt;&lt;br /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>📍 12h-14h (midi)&lt;br /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>📍 19h-21h (soir)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white bg-opacity-20 p-2 sm:p-3 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;strong&gt;TikTok&lt;/strong&gt;&lt;br /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>📍 12h-15h&lt;br /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>📍 19h-22h</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white bg-opacity-20 p-2 sm:p-3 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;strong&gt;Snapchat&lt;/strong&gt;&lt;br /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>📍 En temps réel&lt;br /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>📍 Moments forts</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="mt-4 p-3 bg-white bg-opacity-20 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h4 class="font-semibold mb-2"&gt;📱 Partage cet outil :&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p class="text-xs sm:text-sm opacity-90"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>Envoie le lien de cette page à ton équipe sur WhatsApp !<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>Ils pourront générer leurs propres idées de posts.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// State variables</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let selectedPlatform = 'instagram';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let selectedCategory = 'promo';</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Post ideas data</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const postIdeas = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>instagram: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>promo: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>visual: "Photo de la pizza 4 Saisons avec un gros plan sur les ingrédients frais",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>caption: "🍕 La 4 Saisons : jambon, champignons, artichauts, tomates cerises, olives et basilic frais !\n\n✨ -50% sur la 2ème pizza le midi uniquement\n📍 951 Avenue de Dunkerque, Lomme\n☎️ 03 20 04 05 79\n\n#ItalianTouchPizzeria #PizzaLomme #PizzaHalal #PromoMidi",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>hashtags: "#pizza #lomme #halal #promo #italien #foodlover"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>visual: "Story avec timer : Pizza Marguerita qui sort du four, fumante",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>caption: "🔥 FRAÎCHE DU FOUR !\nPâte pétrie chaque jour + ingrédients 100% naturels = Le combo parfait !\n\nCommandez maintenant 👆\n\n#QualitéItalienne #FaitMaison",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>hashtags: "#fresh #qualite #faitmaison #pizzatime"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>visual: "Carrousel avant/après : boule de pâte → pizza finie",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>caption: "De nos mains à votre assiette... 👨‍🍳\n\nNotre secret ? Une pâte pétrie chaque matin avec amour !\n\n🕐 Commandez dès 11h\n📞 03 20 04 05 79",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>hashtags: "#artisan #faitmaison #patetraditionnelle"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>lifestyle: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>visual: "Boomerang du pizzaïolo qui étale la pâte",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>caption: "La magie opère... ✨\nNotre pâte faite maison, pétrie chaque jour avec amour 🤌\n\n'Sentez l'arôme, goûtez l'amour de l'Italie'\n\n#SavoirFaire #Artisan #ItalianTouch",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>hashtags: "#artisan #savoirfaire #italien #pizza"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>visual: "Flat lay de tous les ingrédients pour une pizza Truffe",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>caption: "Les secrets de notre Pizza Signature TRUFFE 🍄\n\nCrème de truffe + champignons + roquette + mozzarella + filet d'huile d'olive\n\nUn voyage gustatif en Italie ! 🇮🇹",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>hashtags: "#signature #truffe #ingredients #premium"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>visual: "Time-lapse de la préparation d'une pizza depuis le pétrissage",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>caption: "6h du matin : notre équipe prépare déjà vos futures pizzas ! 🌅\n\nDu pétrissage à la cuisson, tout est fait avec passion.\n\nViande 100% Halal ✅\nIngrédients naturels ✅",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>hashtags: "#behindthescenes #passion #halal #qualite"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>engagement: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>visual: "Carrousel de 3 pizzas : Marguerita, 4 Saisons, Pimento",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>caption: "Quel est ton trio gagnant ? 🤔\n\n1️⃣ La classique Marguerita\n2️⃣ La généreuse 4 Saisons<span class="Apple-converted-space">  </span>\n3️⃣ La pimentée Pimento 🌶️\n\nDis-nous en commentaire ! 👇",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>hashtags: "#choix #pizzas #commentaire #engagement"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>visual: "Quiz story : ingrédients mystères d'une pizza",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>caption: "Devine cette pizza avec ces indices ! 🕵️‍♀️\n\n🧀 Reblochon\n🥔 Pommes de terre\n🥓 Lardons\n\nPremier qui trouve gagne une pizza ! La réponse en story dans 2h...",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>hashtags: "#quiz #jeu #pizza #mystere"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>tiktok: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>concept: "Transformation d'une boule de pâte en pizza",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>script: "Début : Boule de pâte\n→ Étalage rapide en musique\n→ Ajout sauce tomate artistique\n→ Mozzarella qui tombe en pluie\n→ Garniture qui vole et se pose\n→ Zoom sur la pizza finie\n\nTexte : 'POV: Tu commandes chez Italian Touch'",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>son: "Son tendance transformation ou musique italienne énergique"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>concept: "Défi 'Devine la pizza'",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>script: "Montrer juste les ingrédients sans révéler\n→ Suspense avec zoom sur chaque ingrédient\n→ Les utilisateurs devinent en commentaires\n→ Révélation surprise de la pizza à la fin\n\nExemple : Reblochon + pommes de terre + lardons = Tartiflette",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>son: "Son de suspense ou musique de jeu TV"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>concept: "Behind the scenes matinal",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>script: "6h du matin : préparation de la pâte\n→ Pétrissage en accéléré\n→ Préparation des ingrédients\n→ 'Prêt pour vous régaler !'\n\nTexte : 'Journée type chez Italian Touch'\nTags : #MorningVibes #BehindTheScenes",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>son: "Musique motivante du matin type 'Good Morning'"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>concept: "Challenge 'Rate my pizza'",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>script: "Montrer différentes pizzas une par une\n→ Demander aux viewers de noter /10\n→ Statistiques en temps réel\n→ 'Votre préférée c'est...'\n\nFinaliser avec la pizza la mieux notée",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>son: "Son viral 'Rate my...' ou musique de compétition"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>snapchat: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>type: "Story spontanée",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>content: "Pizza qui sort du four avec le filtre température\nTexte : 'Qui a dit que le bonheur ne se commande pas ? 🔥'\nSticker localisation + heure + température",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>timing: "Pendant le service, quand les pizzas sortent du four"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>type: "Snap rapide",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>content: "Selfie de l'équipe avec des pizzas\nTexte : 'L'équipe qui va vous régaler ce soir ! 😄'\nEmoji pizza + coeur + filtre groupe",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>timing: "Début de service du soir (18h-19h)"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>type: "Story promo flash",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>content: "Zoom sur une pizza avec texte animé\n'RAPPEL : -50% sur la 2ème pizza jusqu'à 14h !'\nCompte à rebours + sticker promo",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>timing: "Pendant la promo midi (12h-13h30)"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>type: "Snap client heureux",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>content: "Client qui mord dans sa pizza avec réaction\nTexte : 'La réaction dit tout ! 😍'\nMusique + emoji satisfaction",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>timing: "Quand un client mange sur place"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function selectPlatform(platform) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectedPlatform = platform;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Reset all platform buttons</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.platform-btn').forEach(btn =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>btn.classList.remove('active', 'border-blue-500', 'bg-blue-50');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>btn.classList.add('border-gray-200');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>btn.querySelector('svg').classList.remove('text-blue-600');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>btn.querySelector('svg').classList.add('text-gray-600');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Activate selected platform</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const selectedBtn = document.getElementById(platform + '-btn');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectedBtn.classList.add('active', 'border-blue-500', 'bg-blue-50');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectedBtn.classList.remove('border-gray-200');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectedBtn.querySelector('svg').classList.add('text-blue-600');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectedBtn.querySelector('svg').classList.remove('text-gray-600');</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Show/hide Instagram categories</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const categoriesDiv = document.getElementById('instagram-categories');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (platform === 'instagram') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>categoriesDiv.classList.remove('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>categoriesDiv.classList.add('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Update generate button style</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const generateBtn = document.getElementById('generate-btn');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>generateBtn.classList.remove('instagram-gradient', 'tiktok-gradient', 'snapchat-gradient');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>generateBtn.classList.add(platform + '-gradient');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function selectCategory(category) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectedCategory = category;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Reset all category buttons</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.querySelectorAll('#instagram-categories button').forEach(btn =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>btn.classList.remove('border-purple-500', 'bg-purple-50');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>btn.classList.add('border-gray-200');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Activate selected category</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const selectedBtn = document.getElementById(category + '-btn');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectedBtn.classList.add('border-purple-500', 'bg-purple-50');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectedBtn.classList.remove('border-gray-200');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function generatePost() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>let content;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (selectedPlatform === 'instagram') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const posts = postIdeas.instagram[selectedCategory];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>content = posts[Math.floor(Math.random() * posts.length)];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const posts = postIdeas[selectedPlatform];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>content = posts[Math.floor(Math.random() * posts.length)];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>displayPost(content);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function displayPost(content) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const postDiv = document.getElementById('generated-post');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const titleElement = document.getElementById('post-title');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const contentElement = document.getElementById('post-content');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const bonusTipElement = document.getElementById('bonus-tip');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const indicatorElement = document.getElementById('platform-indicator');</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Update title and indicator</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>titleElement.textContent = `Idée pour ${selectedPlatform}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>indicatorElement.className = `h-3 w-3 rounded-full ${selectedPlatform === 'instagram' ? 'bg-gradient-to-r from-purple-600 to-pink-600' : selectedPlatform === 'tiktok' ? 'bg-gradient-to-r from-black to-red-600' : 'bg-gradient-to-r from-yellow-400 to-yellow-600'}`;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Generate content based on platform</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>let contentHTML = '';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (selectedPlatform === 'instagram') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>contentHTML = `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-gray-50 p-4 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-gray-800 mb-2 flex items-center gap-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;circle cx="12" cy="13" r="4"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>Visuel suggéré</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-700 text-sm sm:text-base"&gt;${content.visual}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-blue-50 p-4 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-gray-800 mb-2 flex items-center gap-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>Caption</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-700 whitespace-pre-line text-sm sm:text-base"&gt;${content.caption}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-purple-50 p-4 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-gray-800 mb-2"&gt;# Hashtags&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-purple-700 text-sm sm:text-base"&gt;${content.hashtags}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>bonusTipElement.textContent = "Publie en stories d'abord pour tester l'engagement, puis en post si ça marche bien !";</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else if (selectedPlatform === 'tiktok') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>contentHTML = `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-gray-50 p-4 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-gray-800 mb-2"&gt;💡 Concept&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-700 text-sm sm:text-base"&gt;${content.concept}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-red-50 p-4 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-gray-800 mb-2"&gt;🎬 Script&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-700 whitespace-pre-line text-sm sm:text-base"&gt;${content.script}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-yellow-50 p-4 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-gray-800 mb-2"&gt;🎵 Son&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-700 text-sm sm:text-base"&gt;${content.son}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>bonusTipElement.textContent = "Filme plusieurs versions et garde celle avec le meilleur dynamisme. L'authenticité marche mieux que la perfection !";</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else { // Snapchat</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>contentHTML = `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-yellow-50 p-4 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-gray-800 mb-2 flex items-center gap-2"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;circle cx="12" cy="12" r="10"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;polyline points="12,6 12,12 16,14"/&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/svg&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>${content.type}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-700 text-sm sm:text-base"&gt;${content.content}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="bg-orange-50 p-4 rounded-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-semibold text-gray-800 mb-2"&gt;⏰ Timing optimal&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-gray-700 text-sm sm:text-base"&gt;${content.timing}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>bonusTipElement.textContent = "Sois spontané et authentique ! Snapchat récompense le contenu naturel et en temps réel.";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>contentElement.innerHTML = contentHTML;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>postDiv.classList.remove('hidden');</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// Smooth scroll to the generated post</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>postDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Initialize the app</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', function() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectPlatform('instagram');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectCategory('promo');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+</body>
+</html>
